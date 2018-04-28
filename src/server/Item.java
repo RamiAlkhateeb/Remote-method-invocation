@@ -11,11 +11,11 @@ package server;
  */
 public class Item {
     String name;
-    String category;
+    Category category;
     double price;
     int qnt;
     
-    public Item(String name, String category, double price, int qnt) {
+    public Item(String name, Category category, double price, int qnt) {
         this.name = name;
         this.category = category;
         this.price = price;
@@ -26,7 +26,7 @@ public class Item {
         return name;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
@@ -42,7 +42,7 @@ public class Item {
         this.name = name;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 

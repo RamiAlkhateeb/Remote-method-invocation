@@ -7,6 +7,7 @@ package shared;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import server.Category;
 
 /**
  *
@@ -14,11 +15,15 @@ import java.rmi.RemoteException;
  */
 public interface Cart extends Remote {
 
-    public void addItem(String name, String category, double price, int qnt) throws RemoteException;
+    public void addItem(String name, Category category, double price, int qnt) throws RemoteException;
 
-    public void deleteItem(String name, String category, double price, int qnt) throws RemoteException;
+    public void deleteItem(String name, Category category, double price, int qnt) throws RemoteException;
 
     public void caculateTotal() throws RemoteException;
     
     public void getCart (int cartid) throws RemoteException;
+    
+    public String viewstore() throws RemoteException;
+    
+    public void init() throws RemoteException;
 }
